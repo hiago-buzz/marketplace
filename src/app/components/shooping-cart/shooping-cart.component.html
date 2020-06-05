@@ -1,0 +1,29 @@
+<main>
+    <img (click)="openCart()" src="../../../assets/img/shopping-cart.svg" alt="shopping cart">
+    <span>{{ shoppingService.itemsCart.length }}</span>
+</main>
+
+<aside id="modalCart" class="hidden">
+    <div class="shopping-header">
+        <h3>Itens selecionados</h3>
+        <img (click)="closeCart()" class="close" src="../../../assets/img/close.svg" alt="close">
+    </div>
+    <div class="main">
+        <div class="div-item" *ngFor="let item of shoppingService.itemsCart">
+            <img class="shopImage" [attr.src]="item.img" alt="">
+            <div class="div-item-describe">
+                <h2>{{ item.name }}</h2>
+                <p class="describe">{{ item.describe }}</p>
+                <h4>R$ {{ item.price }} </h4>
+            </div>
+            <div class="div-close-item">
+                <img (click)="deleteItem(item.id)" class="close-item" src="../../../assets/img/close-wine.svg"
+                    alt="close">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button>Fechar pedido</button>
+    </div>
+</aside>

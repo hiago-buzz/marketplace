@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Máscara Capilar",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157021/mascaraCapilar.png?v=636875825115370000",
+        "price": "29,99",
+        "describe": "Na Forever Liss você encontra Máscara Capilar Hidratante, Máscara Desmaia Cabelo e muito mais. Confira!"
+    },
+    {
+        "id": 2,
+        "name": "Shampoo",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157024/LandingProdutoShampoo.png?v=636876524225130000",
+        "price": "39,99",
+        "describe": "Compre Shampoo Matizador, shampoo para cabelos oleosos e quebradiços. Encontre produtos profissionais!"
+    },
+    {
+        "id":3,
+        "name": "Condicionador",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157025/LandingProdutoCondicionador.png?v=636879310841500000",
+        "price": "29,99",
+        "describe": "Confira nossa linha incrível de Creme Condicionador Profissional para todos os tipos de cabelos. Compre online!"
+    },
+    {
+        "id": 4,
+        "name": "Leave-in",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157026/LandingProdutoLeaveIn.png?v=636876527896800000",
+        "price": "29,99",
+        "describe": "Conheça nossa linha incrível Leave-in Banho de Verniz, Leave-in Home Care, Leave-in Mealiza e muito mais. Aproveite!"
+    },
+    {
+        "id": 1,
+        "name": "Máscara Capilar",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157021/mascaraCapilar.png?v=636875825115370000",
+        "price": "29,99",
+        "describe": "Na Forever Liss você encontra Máscara Capilar Hidratante, Máscara Desmaia Cabelo e muito mais. Confira!"
+    },
+    {
+        "id": 2,
+        "name": "Shampoo",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157024/LandingProdutoShampoo.png?v=636876524225130000",
+        "price": "39,99",
+        "describe": "Compre Shampoo Matizador, shampoo para cabelos oleosos e quebradiços. Encontre produtos profissionais!"
+    },
+    {
+        "id":3,
+        "name": "Condicionador",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157025/LandingProdutoCondicionador.png?v=636879310841500000",
+        "price": "29,99",
+        "describe": "Confira nossa linha incrível de Creme Condicionador Profissional para todos os tipos de cabelos. Compre online!"
+    },
+    {
+        "id": 4,
+        "name": "Leave-in",
+        "img": "https://foreverliss.vteximg.com.br/arquivos/ids/157026/LandingProdutoLeaveIn.png?v=636876527896800000",
+        "price": "29,99",
+        "describe": "Conheça nossa linha incrível Leave-in Banho de Verniz, Leave-in Home Care, Leave-in Mealiza e muito mais. Aproveite!"
+    }
+]

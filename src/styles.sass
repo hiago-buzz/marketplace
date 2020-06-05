@@ -1,0 +1,62 @@
+$base-color: #870036
+$second-color: #ffdc04
+$text-color: #777
+$light-grey: #e6e6e6
+
+*
+    font-family: Arial
+    margin: 0
+    padding: 0
+
+.hidden
+    display: none
+
+.form-control
+    border: 1px solid $light-grey
+    border-radius: 20px
+    height: 40px
+    min-width: 300px
+    box-sizing: border-box
+    margin: 0.5em
+    outline: none
+    padding: 10px
+    &:focus
+        border: 2px solid $base-color
+
+.btn-login
+    border: none
+    min-width: 300px
+    height: 40px
+    border: none
+    border-radius: 20px
+    background-color: $base-color
+    color: #fff
+    font-weight: bold
+    cursor: pointer
+    margin-bottom: 30px
+    float: right
+    outline: none
+    &:hover
+        opacity: 0.9
+        -webkit-box-shadow: 0px 1px 2px 1px $base-color
+        -moz-box-shadow: 0px 1px 2px 1px $base-color
+        box-shadow: 0px 1px 2px 1px $base-color
+
+.btn-register
+    border: none
+    min-width: 300px
+    height: 40px
+    border: none
+    border-radius: 20px
+    background-color: $second-color
+    color: $base-color
+    font-weight: bold
+    cursor: pointer
+    margin-bottom: 30px
+    float: right
+    outline: none
+    &:hover
+        opacity: 0.9
+        -webkit-box-shadow: 0px 1px 2px 1px $second-color
+        -moz-box-shadow: 0px 1px 2px 1px $second-color
+        box-shadow: 0px 1px 2px 1px $second-color
