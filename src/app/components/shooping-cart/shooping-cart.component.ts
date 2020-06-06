@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from 'src/app/services/shopping-cart/shopping-cart.service';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AuthUserService } from 'src/app/services/authUser/auth-user.service';
+
 
 @Component({
   selector: 'app-shooping-cart',
@@ -8,7 +12,12 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart/shopping-car
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor(public shoppingService: ShoppingCartService) { }
+  constructor(
+    public shoppingService: ShoppingCartService,
+    private router: Router,
+    public toast: ToastrService,
+    private auth: AuthUserService
+  ) { }
 
   ngOnInit(): void {
 
@@ -22,7 +31,21 @@ export class ShoppingCartComponent implements OnInit {
     document.querySelector("#modalCart").classList.add("hidden");
   }
 
-  deleteItem(id: number){
+  deleteItem(id: number) {
     this.shoppingService.trashItem(id)
+  }
+
+  checkout() {
+    if (this.shoppingService.itemsCart.length > 0) {
+      let user: any = this.auth.validSession();
+      if(user){
+        this.router.navigate([`perfil/${user.id}`])
+      }else{
+        this.router.navigate(['login'])
+      }
+      
+    }else{
+      this.toast.warning("Insira algo no carrinho para continuar");
+    }
   }
 }

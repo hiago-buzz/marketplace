@@ -12,6 +12,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingComponent } from './components/loading/loading.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     LoginComponent,
     RegisterComponent,
     LoadingComponent,
+    PerfilComponent,
+    HeaderComponent,
 
   ],
   imports: [

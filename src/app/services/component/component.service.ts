@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ComponentService {
   navbar: boolean = false;
+  header: boolean = false;
   constructor() { }
 
 }

@@ -6,6 +6,7 @@ import { Address } from '../../interfaces/address';
 import { ToastrService } from 'ngx-toastr';
 import { AuthUserService } from 'src/app/services/authUser/auth-user.service';
 import { LoadingSpinnerService } from 'src/app/services/loadingSpinner/loading-spinner.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -30,9 +31,11 @@ export class RegisterComponent implements OnInit {
     private http: RequestService,
     private toastr: ToastrService,
     private authUser: AuthUserService,
-    private loading: LoadingSpinnerService
+    private loading: LoadingSpinnerService,
+    private router: Router
   ) {
     this.component.navbar = true
+    this.component.header = true
   }
 
   ngOnInit(): void {
@@ -40,6 +43,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.component.navbar = false
+    this.component.header = false
   }
 
   getAddress() {
@@ -71,14 +75,16 @@ export class RegisterComponent implements OnInit {
       this.loading.close();
       this.toastr.error("Preencha todos os campos para continuar");
     } else {
-      if (this.authUser.createUser(this.formRegister.value)) {
+      let user: any = this.authUser.createUser(this.formRegister.value)
+      if (user) {
         this.loading.close();
         this.toastr.success("Usuario cadastrado com sucesso");
+        this.router.navigate([`perfil/${user.id}`])
       } else {
         this.loading.close();
         this.toastr.error("Ooops! Email ja cadastrado, tente novamente.");
       }
     }
-
   }
+  
 }

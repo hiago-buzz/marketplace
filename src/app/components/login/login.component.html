@@ -1,10 +1,12 @@
 <main>
     <div>
         <h2>FAÇA O LOGIN</h2>
-        <input type="text" class="form-control" placeholder="Digite seu Email">
-        <input type="password" class="form-control" placeholder="**********">
-        <a >esqueci minha senha</a>
-        <button class="btn-login">Login</button>
+        <form [formGroup]="formLogin">
+            <input type="text" class="form-control" placeholder="Digite seu Email" formControlName="email">
+            <input type="password" class="form-control" placeholder="**********" formControlName="password">
+        </form>
+        <a>esqueci minha senha</a>
+        <button class="btn-login" (click)="login()">Login</button>
         <button class="btn-register" routerLink="/register">Cadastar</button>
         <a routerLink="/">Voltar</a>
     </div>

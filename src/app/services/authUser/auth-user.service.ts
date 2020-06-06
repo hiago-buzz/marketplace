@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +7,9 @@ import { Injectable } from '@angular/core';
 export class AuthUserService {
 
   authorized: boolean = false;
+  logUser = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   private generateKey() {
     return Math.floor(Math.random() * 65536);
@@ -21,7 +23,9 @@ export class AuthUserService {
     } else {
       data = Object.assign(data, { id: this.generateKey() })
       localStorage.setItem(data.email, JSON.stringify(data))
-      return true
+      this.authorized = true;
+      this.logUser = data;
+      return data
     }
   }
 
@@ -43,11 +47,11 @@ export class AuthUserService {
 
   login(data) {
     let user: any = localStorage.getItem(data.email);
-
-    if (user != "") {
+    if (user) {
       user = JSON.parse(user);
       if (data.email === user.email && data.password === user.password) {
-        this.authorized = true
+        this.authorized = true;
+        this.logUser = user;
         return user;
       } else {
         return false
@@ -56,5 +60,19 @@ export class AuthUserService {
       return false
     }
 
+  }
+
+  logout(){
+    this.authorized = false
+    this.logUser = []
+    this.router.navigate(['/']);
+  }
+
+  validSession(){
+    if(this.authorized){
+      return this.logUser
+    }else{
+      return false
+    }
   }
 }
