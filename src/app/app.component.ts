@@ -8,7 +8,5 @@ import { ComponentService } from './services/component/component.service';
 })
 export class AppComponent {
   title = 'marketplace';
-  constructor(public component: ComponentService){
-    
-  }
+  constructor(public component: ComponentService) {}
 }

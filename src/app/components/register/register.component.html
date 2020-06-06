@@ -1,0 +1,18 @@
+<main>
+    <div class="div-register">
+        <h2>PREENCHA O CADASTRO</h2>
+        <form [formGroup]="formRegister">
+            <input type="text" class="form-control" placeholder="Nome Completo" formControlName="name">
+            <input type="text" class="form-control" placeholder="Digite seu Email" formControlName="email">
+            <input type="password" class="form-control" placeholder="**********" formControlName="password">
+            <input id="cep" type="text" class="form-control" placeholder="CEP" formControlName="cep" (change)="getAddress()">
+            <input type="text" class="form-control" placeholder="Endereço" formControlName="address" disabled>
+            <input type="text" class="form-control" placeholder="Número" formControlName="number">
+            <input type="text" class="form-control" placeholder="Bairro" formControlName="district" disabled>
+            <input type="text" class="form-control" placeholder="Cidade" formControlName="city" disabled>
+            <input type="text" class="form-control" placeholder="Estado" formControlName="state" disabled>
+        </form>
+        <button class="btn-register" routerLink="/register" (click)="registerUser()">Cadastar</button>
+        <a routerLink="/login">Voltar</a>
+    </div>
+</main>

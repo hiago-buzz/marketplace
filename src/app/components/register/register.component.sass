@@ -1,0 +1,53 @@
+@import "../../../styles.sass"
+
+main
+    width: 100%
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #f1f1f1
+
+    .div-register
+        width: 500px
+        height: 100vh
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        border-radius: 20px
+        padding: 20px 0
+        box-sizing: border-box
+        background-color: #FFF
+        -webkit-box-shadow: 0px 1px 2px 1px $light-grey
+        -moz-box-shadow: 0px 1px 2px 1px $light-grey
+        box-shadow: 0px 1px 2px 1px $light-grey
+
+        form
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+        h2
+            margin-bottom: 20px
+
+        .div-address
+            max-width: 500px
+            display: flex
+            align-items: center
+
+        button
+            margin-top: 10px
+            margin-bottom: 0
+        a
+            color: $base-color
+            font-weight: bold
+            text-decoration: none
+            margin-top: 10px
+            font-size: 12px
+            cursor: pointer
+            &:last-child
+                margin-top: 30px
+            
+            &:hover
+                text-decoration: underline
